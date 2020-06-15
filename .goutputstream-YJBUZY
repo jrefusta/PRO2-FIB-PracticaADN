@@ -1,0 +1,71 @@
+/** @file individu.hh
+   @brief Classe Individu
+ */
+#ifndef INDIVIDU_HH
+#define INDIVIDU_HH
+
+#include <iostream>
+#include <vector>
+#include "poblacio.hh"
+using namespace std;
+
+/** @class individu
+    @brief Representa un individu
+  */
+
+class Individu {
+    
+private:
+    char composicion_genetica;
+    vector<par_cromosomas> vector_cromosomas;
+    
+public:
+    //Constructoras
+    
+     /** @brief Creació d'un individu.
+      */
+    Individuo();
+    
+    //Consultores
+    
+    /** @brief Comprova el gènere de l'individu, si és femení ens retorna fals, i si es masculí, cert.
+       \pre: cert
+       \post: ens retorna cert si l'individu és de gènere masculí i fals si es de gènere femení.
+     */
+    bool genere();
+    
+    /** @brief Comprova si l'individu té pare registrat al sistema.
+       \pre: cert
+       \post: cert si el pare de l'individu apareix en el sistema.
+     */
+    bool te_pare();
+    
+    /** @brief Comprova si l'individu té mare registrada al sistema.
+       \pre: cert
+       \post: cert si la mare de l'individu apareix en el sistema.
+     */
+    bool te_mare();
+    
+    //Escriptura i Lectura
+    
+    /** @brief Escriu el genotip del individu seleccionat
+      \pre: Al pi existeix el nostre individu.
+      \post: Ens retorna de forma creixent de dentificador, el parell de cromosomes (primer els sexuals i després els N parells de cromosomes normals.
+     */
+    void escribir_genotipo();
+    
+    /** @brief Llegeix la composicio genetica i els cromosomes sexuals de un individu
+      \pre: cert
+      \post: Llegeix la composicio genetica i els cromosomes sexuals de un individu
+     */
+    void llegir_comp_gen_i_cromosomas_sex(int lx, int ly);
+    
+    /** @brief Llegeix la posicio del vector de cromosomes i el numero de gens del mateix
+      \pre: cert
+      \post: Llegeix la posicio del vector de cromosomes i el numero de gens del mateix
+     */
+    void leer_cromosomas_n(int posicion, int numero_genes);
+    
+}; 
+
+#endif
