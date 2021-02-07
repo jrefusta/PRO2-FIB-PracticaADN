@@ -10,7 +10,7 @@ First, execute make in the console:
 make
 ```
 
-the, run the program generated in console with the command:
+then, run the program generated in console with the command:
 ```
 ./program.exe
 ```
