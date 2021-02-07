@@ -1,5 +1,20 @@
 # PRO2-FIB-PracticaADN
 University project done during the PRO2 subject in FIB, UPC. 2016-2017
+Grade: **10.0**.
+
+# How to run
+
+First, execute make in the console:
+```
+make
+```
+
+the, run the program generated in console with the command:
+```
+./program.exe
+```
+
+# Statement
 # Jutge.org
 
 The Virtual Learning Environment for Computer Programming
